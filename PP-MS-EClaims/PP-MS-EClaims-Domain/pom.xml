@@ -11,4 +11,11 @@
 	<artifactId>PP-MS-EClaims-Domain</artifactId>
 	<packaging>jar</packaging>
 	<name>PP-MS-EClaims-Domain</name>
+	<dependencies>
+		<dependency>
+			<groupId>jk.provider.portal.ms.commons</groupId>
+			<artifactId>PP-MS-Commons-Libs</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 </project>

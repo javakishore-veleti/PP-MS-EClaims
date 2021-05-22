@@ -41,5 +41,15 @@
 			<groupId>jk.provider.portal.ms.commons</groupId>
 			<artifactId>PP-MS-Commons-Libs</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>jk.provider.portal.ms.eclaims</groupId>
+			<artifactId>PP-MS-EClaims-Domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>jk.provider.portal.ms.eclaims</groupId>
+			<artifactId>PP-MS-EClaims-Service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 </project>
