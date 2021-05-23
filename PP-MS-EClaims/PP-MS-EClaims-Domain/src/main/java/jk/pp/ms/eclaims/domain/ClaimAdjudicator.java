@@ -1,5 +1,7 @@
 package jk.pp.ms.eclaims.domain;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -13,13 +15,22 @@ import lombok.NoArgsConstructor;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@Entity(name = "ClaimInfo")
-@Table(name = "claim_info")
-public class ClaimInfo extends BaseDomain implements IClaimInfo {
+@Entity(name = "ClaimAdjudicator")
+@Table(name = "claim_adjudicator")
+public class ClaimAdjudicator extends BaseDomain implements IClaimInfo {
 
 	private static final long serialVersionUID = 1L;
 
+	@Column(name = "claim_pk")
+	private Long claimPK;
+
 	@Column(name = "member_pk")
 	private Long memberPK;
+
+	@Column(name = "adjudicator_pk")
+	private Long adjudicatorPK;
+
+	@Column(name = "assigned_on")
+	private Date assignedOn;
 
 }
