@@ -11,7 +11,8 @@ import jk.pp.ms.commons.configs.MSCommonGlobalConfig;
 import jk.pp.ms.commons.configs.MSType;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "jk.pp.ms.eclaims.domain", "jk.pp.ms.eclaims.dao", "jk.pp.ms.eclaims.service" })
+@ComponentScan(basePackages = { "jk.pp.ms.eclaims.domain", "jk.pp.ms.eclaims.dao", "jk.pp.ms.eclaims.service",
+		"jk.pp.ms.eclaims.web" })
 @EntityScan(basePackages = { "jk.pp.ms.eclaims.domain" })
 @EnableJpaRepositories(basePackages = { "jk.pp.ms.eclaims.dao" })
 @Import(value = { MSCommonGlobalConfig.class })
