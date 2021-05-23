@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import jk.pp.engg.foundations.common.core.domain.claims.IClaimInfo;
 import jk.pp.engg.foundations.common.domain.core.BaseDomain;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity(name = "ClaimInfo")
 @Table(name = "claim_info")
-public class ClaimInfo extends BaseDomain implements IClaimInfo {
+public class ClaimInfo extends BaseDomain {
 
 	private static final long serialVersionUID = 1L;
 
