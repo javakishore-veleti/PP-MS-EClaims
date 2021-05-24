@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pp-ms-eclaims-web
+spec:
+  defaultBackend:
+      service:
+        name: pp-ms-eclaims-web
+        port: 
+          number: 8000
