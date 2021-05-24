@@ -1,0 +1,15 @@
+FROM adoptopenjdk:11-jre-hotspot
+
+ENV WORKDIR_PATH=provider-portal
+ENV SERVICE_ACCOUNT_USER=providerportaluser
+
+WORKDIR ${WORKDIR_PATH}
+
+ARG JAR_FILE=target/*.jar
+
+COPY ${JAR_FILE} provider-portal-eclaims.jar
+
+EXPOSE 8080
+EXPOSE 8000
+
+CMD ["java","-jar","${WORKDIR_PATH}/PP-MS-EClaims-Docker.jar"]

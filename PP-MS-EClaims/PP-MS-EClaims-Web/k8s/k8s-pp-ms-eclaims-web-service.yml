@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pp-ms-eclaims-web
+  labels:
+    app: pp-ms-eclaims-web
+    department: eclaims
+spec:
+  type: ClusterIP
+  selector:
+    app: pp-ms-eclaims-web
+    department: eclaims
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000

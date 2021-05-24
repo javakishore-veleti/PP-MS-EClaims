@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pp-ms-eclaims-web
+  labels:
+    app: pp-ms-eclaims-web
+    department: eclaims
+spec:
+  selector:
+    matchLabels:
+      app: pp-ms-eclaims-web
+      department: eclaims
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: pp-ms-eclaims-web
+        department: eclaims
+    spec:
+      containers:
+      - name: pp-ms-eclaims-web
+        image: "provider-portal/ms-eclaims"
+        imagePullPolicy: Never
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 60
+          successThreshold: 1
+          timeoutSeconds: 10
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /health
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 60
+          successThreshold: 1
+          timeoutSeconds: 10
+        ports:
+        - containerPort: 8000
